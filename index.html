@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ท่องเที่ยวขอนแก่น</title>
+
+<style>
+body{
+    margin:0;
+    font-family:"Prompt",sans-serif;
+    background:#f4f6f9;
+    scroll-behavior:smooth;
+}
+
+header{
+    background: url("images/doorkhonkhen.jpg") no-repeat center;
+    background-size: cover;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+    position:relative;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+}
+
+header h1{
+    position:relative;
+    z-index:1;
+    font-size:36px;
+}
+
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffcc00;
+}
+
+section{
+    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.history{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+iframe{
+    width:100%;
+    height:180px;
+    border:none;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+#topBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:10px 15px;
+    border:none;
+    background:#222;
+    color:white;
+    border-radius:50px;
+    cursor:pointer;
+    display:none;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>เว็บไซต์แนะนำสถานที่ท่องเที่ยวจังหวัดขอนแก่น</h1>
+</header>
+
+<nav>
+<a href="#history">ประวัติ</a>
+<a href="#travel">สถานที่ท่องเที่ยว</a>
+</nav>
+
+<section id="history" class="history">
+<h2>ประวัติจังหวัดขอนแก่น</h2>
+<p>
+จังหวัดขอนแก่นก่อตั้งเมื่อปี พ.ศ. 2340 เป็นจังหวัดสำคัญของภาคตะวันออกเฉียงเหนือ 
+เป็นศูนย์กลางด้านการศึกษา เศรษฐกิจ และการคมนาคมของภาคอีสาน 
+มีวัฒนธรรมท้องถิ่นที่โดดเด่น เช่น หมอลำ ผ้าไหม และประเพณีบุญต่าง ๆ
+</p>
+</section>
+
+<section id="travel">
+<h2>สถานที่ท่องเที่ยว</h2>
+
+<div class="container">
+
+<div class="card">
+<img src="images/khon-kaen-lake-1.jpg" alt="บึงแก่นนคร">
+<div class="card-content">
+<h3>บึงแก่นนคร</h3>
+<p>สถานที่พักผ่อนยอดนิยมใจกลางเมือง</p>
+<iframe src="https://maps.google.com/maps?q=บึงแก่นนคร&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+
+<div class="card">
+<img src="images/phra-mahathat-kaen-nakhon-l.jpg" alt="พระมหาธาตุแก่นนคร">
+<div class="card-content">
+<h3>พระมหาธาตุแก่นนคร</h3>
+<p>แลนด์มาร์กสำคัญของจังหวัด ชมวิว 360 องศา</p>
+<iframe src="https://maps.google.com/maps?q=วัดหนองแวง ขอนแก่น&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+
+<div class="card">
+<img src="images/PWNP_Dinosaur_Site_3.jpg" alt="อุทยานแห่งชาติภูเวียง">
+<div class="card-content">
+<h3>อุทยานแห่งชาติภูเวียง</h3>
+<p>แหล่งค้นพบไดโนเสาร์แห่งแรกของไทย</p>
+<iframe src="https://maps.google.com/maps?q=อุทยานแห่งชาติภูเวียง&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+
+<div class="card">
+<img src="images/Phupaman.jpg" alt="ภูผาม่าน">
+<div class="card-content">
+<h3>ภูผาม่าน</h3>
+<p>ชมค้างคาวออกจากถ้ำและธรรมชาติสวยงาม</p>
+<iframe src="https://maps.google.com/maps?q=ภูผาม่าน ขอนแก่น&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+
+<div class="card">
+  <img src="images/ubolratana.jpg.jpg" alt="เขื่อนอุบลรัตน์">
+  <div class="card-content">
+<h3>เขื่อนอุบลรัตน์</h3>
+<p>จุดชมวิวอ่างเก็บน้ำขนาดใหญ่</p>
+<iframe src="https://maps.google.com/maps?q=เขื่อนอุบลรัตน์&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+
+<div class="card">
+<img src="images/tontann.jpg.jpeg" alt="ตลาดต้นตาล">
+<div class="card-content">
+<h3>ตลาดต้นตาล</h3>
+<p>ตลาดกลางคืนยอดนิยม อาหารและดนตรีสด</p>
+<iframe src="https://maps.google.com/maps?q=ตลาดต้นตาล ขอนแก่น&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+จัดทำโดย: นาย จิรายุ โล่ห์อภิรักษ์กุล<br>
+      สาขาเทคโนโลยีสารสนเทศ
+</footer>
+
+<button onclick="topFunction()" id="topBtn">↑</button>
+
+<script>
+window.addEventListener("scroll",function(){
+let cards=document.querySelectorAll(".card");
+cards.forEach(card=>{
+let position=card.getBoundingClientRect().top;
+let screenPosition=window.innerHeight/1.2;
+if(position<screenPosition){
+card.classList.add("show");
+}
+});
+
+if(document.documentElement.scrollTop>200){
+document.getElementById("topBtn").style.display="block";
+}else{
+document.getElementById("topBtn").style.display="none";
+}
+});
+
+function topFunction(){
+document.documentElement.scrollTop=0;
+}
+</script>
+
+</body>
+</html>
